@@ -1,0 +1,57 @@
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100rem;
+}
+
+.navbar {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.hero-section {
+  background-color: #333;
+  color: white;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+.podcast-rows {
+  margin-bottom: 20px;
+}
+
+.podcast-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.podcast-card {
+  background-color: #444;
+  color: white;
+  padding: 20px;
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+}
+
+.audio-player {
+  background-color: #222;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
