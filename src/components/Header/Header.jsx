@@ -10,7 +10,7 @@ export default function Header() {
             <h3> Home </h3>
             <h3> Categories </h3>
             <h3> My Podcasts </h3>
-            <h3> Search </h3> 
+            <h3> Search 🔍</h3> 
             <h3> Profile </h3>
             </div>
         </nav>
