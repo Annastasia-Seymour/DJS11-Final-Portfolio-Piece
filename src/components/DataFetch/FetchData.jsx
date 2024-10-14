@@ -2,7 +2,7 @@ import React , {useEffect , useState } from 'react';
 import '../DataFetch/FetchData.css';
 
 
-function FetchAllData(){
+ function FetchAllData(){
 
     const [podcasts , setPodcasts] = useState([]);
 
@@ -41,5 +41,5 @@ function FetchAllData(){
         </div>
     );
 }
-
-export default FetchAllData;
+ 
+export default FetchAllData 
