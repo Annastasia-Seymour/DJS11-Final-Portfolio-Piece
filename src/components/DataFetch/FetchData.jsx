@@ -2,7 +2,7 @@ import React , {useEffect , useState } from 'react';
 import '../DataFetch/FetchData.css';
 
 
-function FetchData(){
+function FetchAllData(){
 
     const [podcasts , setPodcasts] = useState([]);
 
@@ -16,7 +16,9 @@ function FetchData(){
         })
         .then(data => {
             //console.log(data);// handles the data received
-               setPodcasts (data);
+            const defaultPodcasts = data.sort((a,b) =>
+            a.title.localeCompare(b.title));
+               setPodcasts (defaultPodcasts);
         })
         .catch(error =>{
             console.error('Oh no fetching the api!', error);
@@ -27,10 +29,10 @@ function FetchData(){
         
      return (
         <div>
-            <h1 className='podcast-title-name'>Podcast Titles</h1>
+            <h1 className='podcast-title-name'>Podcast Titles make show all , Genre</h1>
             <div className="title-container">
                 {podcasts.map((podcast, index) => (
-                    <div key={index} className="title-block">
+                    <div key={index} className="title-block" >
                         <img src={podcast.image} alt={podcast.title} className="podcast-image" />
                         <h2>{podcast.title}</h2>
                     </div>
@@ -40,4 +42,4 @@ function FetchData(){
     );
 }
 
-export default FetchData;
+export default FetchAllData;

@@ -21,5 +21,7 @@
 
 }
 .podcast-title-name{
-    
+    display: flex;
+    justify-content: left;
+   
 }
