@@ -1,18 +1,13 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif; /* Set a default font */
-  }
-  
-  /* Fixed header styling */
-  .header--title {
-    background-color: #333;         /* Dark background color */
-    color: white;                   /* Text color */
-    padding: 20px;                  /* Padding around the text */
-    position: fixed;                /* Fixes the header at the top */
-    top: 0;                         /* Positions it at the top */
-    left: 0;                        /* Aligns it to the left */
-    width: 100%;                    /* Full width of the viewport */
-    z-index: 1000;                 /* Ensures it stays above other content */
-  }
+/* Header.css */
+.header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
   

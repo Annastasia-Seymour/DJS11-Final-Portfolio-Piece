@@ -4,19 +4,7 @@ import './App.css'; // Include your styles
 function App() {
   return (
     <div className="app-container">
-      <header className="navbar">
-        {/* Add navigation links */}
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>Categories</li>
-            <li>My Podcasts</li>
-            <li>Search</li>
-            <li>Profile</li>
-          </ul>
-        </nav>
-      </header>
-
+    
       <div className="main-content">
         <div className="hero-section">
           {/* Featured podcast */}
