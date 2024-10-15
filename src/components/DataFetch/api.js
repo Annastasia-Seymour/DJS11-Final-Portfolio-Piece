@@ -39,3 +39,5 @@ export const fetchEpisodes = async (showId) => {
     console.error("Error fetching episodes:", error);
   }
 };
+
+export const SeasonPreview 

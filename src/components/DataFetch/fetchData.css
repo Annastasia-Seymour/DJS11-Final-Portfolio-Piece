@@ -16,8 +16,10 @@
 }
 
 .podcast-image{
-    width:  10rem;
-    height: 10rem;
+    width:  170px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 .podcast-title-name{

@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 import '../DataFetch/FetchData.css';
 import { fetchPreviewData } from './api'; // Adjust the path as needed
 
- export  const FetchEpisodes = () => { 
+// export  const FetchEpisodes = () => { 
 
-    return();
+//     return();
 
 
- };
-export const FetchDataPreview = () => {
+// };
+ const FetchDataPreview = () => {
   const [previewData, setPreviewData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -42,6 +42,12 @@ export const FetchDataPreview = () => {
             <div key={index} className="title-block">
               <img src={podcast.image} alt={podcast.title} className="podcast-image" />
               <h2>{podcast.title}</h2>
+              <p>Seasons: {podcast.seasons} Episodes: {podcast.episodes}</p>
+              <p>Last Updated: {new Date(podcast.updated).toLocaleDateString('en-GB', { 
+                day: 'numeric', 
+                month: 'long', 
+                year: 'numeric' 
+                })}</p>
             </div>
           ))}
         </div>
@@ -50,4 +56,4 @@ export const FetchDataPreview = () => {
   );
 };
 
- FetchDataPreview;
+ export default FetchDataPreview;
