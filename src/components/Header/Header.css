@@ -10,4 +10,11 @@
   z-index: 1000;
 }
 
+.app-tabs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+
+}
   

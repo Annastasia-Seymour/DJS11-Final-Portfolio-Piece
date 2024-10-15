@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css'; // Include your styles
-import FetchAllData from '../DataFetch/FetchData.jsx';
+import FetchAllData from '../DataFetch/FetchData.jsx'; // i have no idea how its still working 
 import { fetchPreviewData } from '../DataFetch/api.js';
+import FetchDataPreview from '../DataFetch/FetchData.jsx';
 
 function App() {
   
@@ -11,7 +12,7 @@ function App() {
     <div className="app-container">
     <div>
     
-        <FetchAllData />
+        <FetchDataPreview />
     </div>
     {/* <button>Filter <FetchGenre/> */}
     

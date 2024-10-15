@@ -25,3 +25,16 @@
     justify-content: left;
    
 }
+
+.loading-screen{
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bolder;
+margin: auto;
+color: #ccc;
+background-color: #A8D3B6 ;
+font-size: 50px;
+font-style: italic;
+}
+
