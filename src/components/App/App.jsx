@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css'; // Include your styles
 import FetchAllData from '../DataFetch/FetchData.jsx';
-//import FetchGenre from '../DataFetch/FetchGenre.jsx';
-import Header from '../Header/Header.jsx'
+import { fetchPreviewData } from '../DataFetch/api.js';
 
 function App() {
   

@@ -2,44 +2,43 @@ import React , {useEffect , useState } from 'react';
 import '../DataFetch/FetchData.css';
 
 
- function FetchAllData(){
+ import { fetchPreviewData } from './api'; // Adjust the path as needed
 
-    const [podcasts , setPodcasts] = useState([]);
+const FetchDataPreview = () => {
+  const [previewData, setPreviewData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-     useEffect (() => {
-        fetch ('https://podcast-api.netlify.app/')
-        .then(response => {
-            if(!response.ok){
-                throw new Error('Network shows 404');
-            }
-            return response.json();
-        })
-        .then(data => {
-            //console.log(data);// handles the data received
-            const defaultPodcasts = data.sort((a,b) =>
-            a.title.localeCompare(b.title));
-               setPodcasts (defaultPodcasts);
-        })
-        .catch(error =>{
-            console.error('Oh no fetching the api!', error);
-        });
-    
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const data = await fetchPreviewData();
+        setPreviewData(data);
+        setLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+    getData();
+  }, []);
 
-     }, []);
-        
-     return (
-        <div>
-            <h1 className='podcast-title-name'>Podcast Titles make show all , Genre</h1>
-            <div className="title-container">
-                {podcasts.map((podcast, index) => (
-                    <div key={index} className="title-block" >
-                        <img src={podcast.image} alt={podcast.title} className="podcast-image" />
-                        <h2>{podcast.title}</h2>
-                    </div>
-                ))}
-            </div>
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
+
+  return (
+    <div>
+        <h1 className='podcast-title-name'>Podcast Titles make show all , Genre</h1>
+        <div className="title-container">
+            {previewData.map((podcast, index) => (
+                <div key={index} className="title-block" >
+                    <img src={podcast.image} alt={podcast.title} className="podcast-image" />
+                    <h2>{podcast.title}</h2>
+                </div>
+            ))}
         </div>
-    );
+    </div>
+);
 }
- 
-export default FetchAllData 
+
+export default FetchDataPreview;
