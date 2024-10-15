@@ -29,3 +29,13 @@ export const fetchShowData = async (id) => {
   const data = await response.json();
   return data;
 };
+
+export const fetchEpisodes = async (showId) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/id/${showId}`);
+    const data = await response.json();
+    return data; // Adjust this based on your API's response structure
+  } catch (error) {
+    console.error("Error fetching episodes:", error);
+  }
+};

@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react';
+
 import '../DataFetch/FetchData.css';
 import { fetchPreviewData } from './api'; // Adjust the path as needed
 
-const FetchDataPreview = () => {
+ export  const FetchEpisodes = () => { 
+
+    return();
+
+
+ };
+export const FetchDataPreview = () => {
   const [previewData, setPreviewData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -43,4 +50,4 @@ const FetchDataPreview = () => {
   );
 };
 
-export default FetchDataPreview;
+ FetchDataPreview;
