@@ -1,16 +1,18 @@
-import React from "react";
+// import React , {useEffect, useState} from "react";
 
 
-function FetchGenre(){
-    return(
-        <div>
-            <h1>
-                Hello i am the fetch request for genre
-            </h1>
+// function FetchGenre(){
+//     return(
+//         const [genre, setGenre] = useState;
+
+//         useEffect () =>
+//             <button>
+//                 Glamourous Genre
+//             </button>
             
-            </div>
-    );
+            
+//     );
 
-}
+// }
 
-export default FetchGenre
+// export default FetchGenre
