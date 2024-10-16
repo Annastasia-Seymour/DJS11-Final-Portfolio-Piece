@@ -1,13 +1,19 @@
 .content-wrapper {
-    display: flex;
+    display: flexbox;
     justify-content: space-between;
     padding: 20px;
   }
   
-  .div1, .div2 {
-    width: 45%; /* Adjust to fit your design */
+  .preview-div {
+    width: 50%; 
+    height: 50%;
     padding: 10px;
     background-color: #f0f0f0; /* Light background color */
     border-radius: 10px;
+  }
+  .trending-div{
+    width: 100px;
+    height: 100px;
+    
   }
   

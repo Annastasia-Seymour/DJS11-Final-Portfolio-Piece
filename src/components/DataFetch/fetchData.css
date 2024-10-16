@@ -9,10 +9,11 @@
 
 .title-block {
     background-color: #000000;         /* Light gray background */
-    border: 1px solid #ccc;            /* Border around each title */
+    border: 1px solid #44f30e;            /* Border around each title */
     border-radius: 5px;                /* Rounded corners */
     padding: 5px;                     /* Padding inside the block */
-    text-align: center;                /* Center text */
+    text-align: center;      
+    color: #A8D3B6;          /* Center text */
 }
 
 .podcast-image{
@@ -24,7 +25,9 @@
 }
 .podcast-title-name{
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    background-color: #A8D3B6
+    color: #ffff;
    
 }
 
@@ -40,3 +43,6 @@ font-size: 50px;
 font-style: italic;
 }
 
+.random-podcast-container{
+    background-color: #A8D3B6;
+}
