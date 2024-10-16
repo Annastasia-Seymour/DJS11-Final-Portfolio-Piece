@@ -35,11 +35,13 @@ import { fetchPreviewData , fetchShowData} from './api'; // Adjust the path as n
         <div className="title-container">
           {previewData.map((podcast, index) => (
             <div key={index} className="title-block">
+              <Link to={`/show/${podcast.id}`}>
               <img src={podcast.image} alt={podcast.title} className="podcast-image" />
+              </Link>
+              
               <h2>{podcast.title}</h2>
               <p>Seasons: {podcast.seasons} </p>
-            
-              <p>Last Updated: {new Date(podcast.updated).toLocaleDateString('en-GB', { 
+               <p>Last Updated: {new Date(podcast.updated).toLocaleDateString('en-GB', { 
                 day: 'numeric', 
                 month: 'long', 
                 year: 'numeric' 
