@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link , useNavigate } from 'react-router-dom';
 import '../DataFetch/FetchData.css';
-import { fetchPreviewData , fetchShowData} from './api'; // Adjust the path as needed
+import { fetchPreviewData } from './api'; // Adjust the path as needed
 
 
  const FetchDataPreview = ({setShows}) => {
@@ -41,29 +41,37 @@ import { fetchPreviewData , fetchShowData} from './api'; // Adjust the path as n
 
   const randomShows = getRandomShows(previewData , 8)// specifies where to get the data and how many
   return (
-    <div className='random-podcast-container'>
-      <h1 className='podcast-title-name'>~Trending right now~</h1>
-      
-        <div className="title-container">
-          {randomShows.map((podcast, index) => (
-            <div key={index} className="title-block">
-            
-              <img src={podcast.image} alt={podcast.title} className="podcast-image" />
-              
-              
-              <h2>{podcast.title}</h2>
-              <p>Seasons: {podcast.seasons} </p>
-               <p>Last Updated: {new Date(podcast.updated).toLocaleDateString('en-GB', { 
+    <div id="carouselExample" className="carousel slide" data-ride="carousel">
+      <div className="carousel-inner">
+        {randomShows.map((podcast, index) => (
+          <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={podcast.id}>
+          
+              <img src={podcast.image} alt={podcast.title} className="d-block w-100" />
+          
+            <div className="carousel-caption d-none d-md-block">
+              <h5>{podcast.title}</h5>
+              <p>Seasons: {podcast.seasons}</p>
+              <p>Last Updated: {new Date(podcast.updated).toLocaleDateString('en-GB', { 
                 day: 'numeric', 
                 month: 'long', 
                 year: 'numeric' 
-                })}</p>
+              })}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
+      <a className="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="sr-only">Previous</span>
+      </a>
+      <a className="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="sr-only">Next</span>
+      </a>
+    </div>
     
   );
 };
 
- export default FetchDataPreview;
+ export default FetchDataPreview;// note that this is in carousel format
+ 

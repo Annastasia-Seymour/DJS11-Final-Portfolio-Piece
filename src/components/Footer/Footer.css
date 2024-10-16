@@ -1,0 +1,10 @@
+
+.audio-player {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+  }
