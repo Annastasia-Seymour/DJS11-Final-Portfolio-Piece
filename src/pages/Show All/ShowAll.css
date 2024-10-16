@@ -1,0 +1,31 @@
+/* ShowAll.css */
+
+.all-shows-container {
+    padding: 20px;
+  }
+  
+  .shows-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4 columns */
+    gap: 20px; /* Space between grid items */
+  }
+  
+  .show-item {
+    background-color: #1a1a1a; /* Adjust background color as needed */
+    border-radius: 8px; /* Optional rounded corners */
+    overflow: hidden; /* Ensures images are contained within the item */
+    text-align: center; /* Center text */
+    padding: 10px; /* Add some padding */
+  }
+  
+  .show-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional rounded corners for images */
+  }
+  
+  h1 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+  }/*We could keep all styling together but i dont know how i feel about that*/
+  

@@ -33,7 +33,7 @@ import { fetchPreviewData } from './api'; // Adjust the path as needed
   //random show will appear first if showall is clicked then the shows will appear on separate page alphabetical order
   return (
     <div className="all-shows-container">
-      <h1>All Shows</h1>
+      <h1>Total Shows: {shows.length}</h1>
       <div className="shows-list">
         {shows.map((show) => (
           <div key={show.id} className="show-item">

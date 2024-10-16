@@ -13,7 +13,8 @@
 /* Style for the logo on the left */
 .custom-logo {
   font-size: 1.5em;             /* Make the logo bigger */
-  font-weight: bold;            /* Bold text for logo */
+  font-weight: bold; 
+  color: aliceblue;           /* Bold text for logo */
 }
 
 /* Style for the buttons on the right */
