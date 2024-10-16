@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Carousel.css'
 //import FetchDataPreview from '../../components/DataFetch/FetchData';
 
 const CarouselComponent = () => {
@@ -7,25 +8,16 @@ const CarouselComponent = () => {
     <div id="carouselExample" className="carousel slide" data-ride="carousel">
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src="https://via.placeholder.com/800x400?text=First+Slide" className="d-block w-50" alt="First Slide" />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>First Slide Label</h5>
-            <p>Description for the first slide.</p>
-          </div>
+          <img src="https://via.placeholder.com/800x400?text=First+Slide" className="custom-image" alt="First Slide" />
+         
         </div>
         <div className="carousel-item">
-          <img src="https://via.placeholder.com/800x400?text=Second+Slide" className="d-block w-50" alt="Second Slide" />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Second Slide Label</h5>
-            <p>Description for the second slide.</p>
-          </div>
+          <img src="https://via.placeholder.com/800x400?text=Second+Slide" className="custom-image" alt="Second Slide" />
+          
         </div>
         <div className="carousel-item">
-          <img src="https://via.placeholder.com/800x400?text=Third+Slide" className="d-block w-50" alt="Third Slide" />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Third Slide Label</h5>
-            <p>Description for the third slide.</p>
-          </div>
+          <img src="https://via.placeholder.com/800x400?text=Third+Slide" className="custom-image" alt="Third Slide" />
+         
         </div>
       </div>
       <a className="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">

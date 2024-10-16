@@ -10,7 +10,6 @@ function LandingPage () {
 
       <div className="content-wrapper">
           <div className="trending-div"> 
-          <h1>Trending</h1>
           <FetchDataPreview />
       </div>
       <Footer />

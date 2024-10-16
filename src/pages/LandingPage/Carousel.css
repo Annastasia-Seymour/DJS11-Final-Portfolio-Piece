@@ -1,0 +1,7 @@
+/* Carousel.css */
+.custom-image {
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Keep aspect ratio, or set to a specific value */
+    object-fit: cover; /* Ensures image covers the space without distortion */
+  }
+  
