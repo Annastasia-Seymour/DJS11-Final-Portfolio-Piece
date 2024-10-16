@@ -16,9 +16,13 @@ export default function Header() {
          <Link to = "/show-all" >
            <button>Show all</button>
         </Link>
-       
-        <button>Favourites</button>
+       <Link to ="/favorites">
+          <button>Favorites</button>
+       </Link>
+       <Link to="/search">
         <button>Search</button>
+       </Link>
+                
       </div>
     </header>
   );

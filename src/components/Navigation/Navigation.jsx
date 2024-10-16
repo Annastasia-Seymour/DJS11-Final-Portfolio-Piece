@@ -1,11 +1,16 @@
 import React from "react";
+import './Navigation.css';
 
 function Navbar(){
 return(
-    <div> 
-        <h1>I am the nav bar
-        </h1>
-        <
+    <div className="nav-container"> 
+    <div className=".nav-logo">
+        Dinosaur
+        </div>
+        <button>A-Z</button>
+        <button>Genre</button>
+        <button>Nav</button>
+        <button>Nav</button>
 
     </div>
     
