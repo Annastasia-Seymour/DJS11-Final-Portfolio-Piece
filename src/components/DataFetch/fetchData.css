@@ -8,7 +8,7 @@
 }
 
 .title-block {
-    background-color: #000000;         /* Light gray background */
+    background-color: #ece7e7;         /* Light gray background */
     border: 1px solid #44f30e;            /* Border around each title */
     border-radius: 5px;                /* Rounded corners */
     padding: 5px;                     /* Padding inside the block */
@@ -60,10 +60,17 @@ font-style: italic;
     text-align: center; /* Center the text */
   }
 
-  .all-shows-container{
+  .show-details{
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #ece7e7;
+    
+
 
   }
-  .shows-list{
+  .season-image{
+    width: 25rem;
 
   } 
   .show-item{

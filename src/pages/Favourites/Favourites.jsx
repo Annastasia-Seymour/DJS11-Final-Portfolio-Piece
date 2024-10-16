@@ -2,7 +2,13 @@ import React from "react";
 
 function Favorites(){
     return(
-        <div>I am your favourite</div>
+        <div>I am your favourite
+
+            <ul>
+            <li>Hallo</li>
+        </ul>
+        </div>
+       
     );
 }
 
