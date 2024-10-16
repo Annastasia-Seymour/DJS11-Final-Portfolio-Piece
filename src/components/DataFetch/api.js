@@ -1,43 +1,40 @@
-const API_BASE_URL = 'https://podcast-api.netlify.app';
+// api.js
 
-// Fetch preview data
-export const fetchPreviewData = async () => {
-  const response = await fetch(`${API_BASE_URL}`);
-  if (!response.ok) {
-    throw new Error('Failed to fetch preview data');
-  }
-  const data = await response.json();
-  return data;
-};
+// Base URL for the API
+const BASE_URL = 'https://podcast-api.netlify.app';
 
-// Fetch genre data by ID
-export const fetchGenreData = async (id) => {
-  const response = await fetch(`${API_BASE_URL}/genre/${id}`);
-  if (!response.ok) {
-    throw new Error('Failed to fetch genre data');
-  }
-  const data = await response.json();
-  return data;
-};
-
-// Fetch show data by ID
-export const fetchShowData = async (id) => {
-  const response = await fetch(`${API_BASE_URL}/id/${id}`);
-  if (!response.ok) {
-    throw new Error('Failed to fetch show data');
-  }
-  const data = await response.json();
-  return data;
-};
-
-export const fetchEpisodes = async (showId) => {
+// Fetch preview data (summary of shows)
+export async function fetchPreviewData() {
   try {
-    const response = await fetch(`${API_BASE_URL}/id/${showId}`);
+    const response = await fetch(`${BASE_URL}`);
     const data = await response.json();
-    return data; // Adjust this based on your API's response structure
+    return data;
   } catch (error) {
-    console.error("Error fetching episodes:", error);
+    console.error('Error fetching preview data:', error);
+    throw error;
   }
-};
+}
 
-export const SeasonPreview 
+// Fetch detailed show data (including seasons and episodes) by show ID
+export async function fetchShowData(showId) {
+  try {
+    const response = await fetch(`${BASE_URL}/id/${showId}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching show data:', error);
+    throw error;
+  }
+}
+
+// Fetch genre data (if needed) by genre ID
+export async function fetchGenreData(genreId) {
+  try {
+    const response = await fetch(`${BASE_URL}/genre/${genreId}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching genre data:', error);
+    throw error;
+  }
+}

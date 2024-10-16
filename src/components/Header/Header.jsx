@@ -5,12 +5,12 @@ export default function Header() {
         <header className="navbar">
         {/* Add navigation links */}
         <nav>
-           
+           <h1>I live in your head</h1>
            <div className='app-tabs'>
             <button> Home </button>
-            <button> Categories </button>
-            <button> My Podcasts </button>
-            <button> Search 🔍</button> 
+            <button> Show All </button>
+            <button> Favorites </button>
+            <button> Browse 🔍</button> 
             <button> Profile </button>
             </div>
         </nav>

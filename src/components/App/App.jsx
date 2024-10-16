@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css'; // Include your styles
 
-//import FetchAllData from '../DataFetch/FetchData.jsx'; // i have no idea how its still working 
+import FetchAllData from '../DataFetch/FetchData.jsx'; // i have no idea how its still working 
 
 import FetchDataPreview from '../DataFetch/FetchData.jsx';
 

@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from 'react';
-
+import { Link } from 'react-router-dom';
 import '../DataFetch/FetchData.css';
-import { fetchPreviewData } from './api'; // Adjust the path as needed
-
-// export  const FetchEpisodes = () => { 
-
-//     return();
+import { fetchPreviewData , fetchShowData} from './api'; // Adjust the path as needed
 
 
-// };
  const FetchDataPreview = () => {
   const [previewData, setPreviewData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -42,7 +37,8 @@ import { fetchPreviewData } from './api'; // Adjust the path as needed
             <div key={index} className="title-block">
               <img src={podcast.image} alt={podcast.title} className="podcast-image" />
               <h2>{podcast.title}</h2>
-              <p>Seasons: {podcast.seasons} Episodes: {podcast.episodes}</p>
+              <p>Seasons: {podcast.seasons} </p>
+            
               <p>Last Updated: {new Date(podcast.updated).toLocaleDateString('en-GB', { 
                 day: 'numeric', 
                 month: 'long', 
