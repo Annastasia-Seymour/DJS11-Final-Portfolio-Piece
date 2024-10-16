@@ -1,20 +1,42 @@
-/* Header.css */
-.header {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+/* Style for the banner container */
+.banner-container {
+  display: flex;  
+  flex-wrap: wrap;             /* Flexbox to align items horizontally */
+  justify-content: space-between; /* Space between logo and buttons */
+  align-items: center;          /* Vertically center logo and buttons */
+  padding: 20px 20px;           /* Add some padding around the banner */
+  background-color: #1a1a1a;    /* Dark background color */
+  color: white;                 /* White text color */
+  width: 100%;                  /* Full-width header */
 }
 
-.app-tabs{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 10px;
-
+/* Style for the logo on the left */
+.custom-logo {
+  font-size: 1.5em;             /* Make the logo bigger */
+  font-weight: bold;            /* Bold text for logo */
 }
-  
+
+/* Style for the buttons on the right */
+.custom-navbar {
+  display: flex;                /* Flexbox to align buttons horizontally */
+  gap: 15px;                    /* Space between the buttons */
+}
+
+/* Button styling */
+.custom-navbar button {
+  background-color: #333;       /* Button background color */
+  color: white;                 /* Button text color */
+  border: none;                 /* Remove borders */
+  padding: 10px 15px;           /* Padding for buttons */
+  cursor: pointer;              /* Make buttons clickable */
+  border-radius: 5px;           /* Rounded corners */
+}
+
+.custom-navbar button:hover {
+  background-color: #555;       /* Change background color on hover */
+}
+
+.banner-header {
+  width: 100%; /* Full width header */
+  /* Other styles */
+}

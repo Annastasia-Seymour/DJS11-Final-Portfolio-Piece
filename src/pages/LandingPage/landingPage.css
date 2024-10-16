@@ -1,0 +1,13 @@
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .div1, .div2 {
+    width: 45%; /* Adjust to fit your design */
+    padding: 10px;
+    background-color: #f0f0f0; /* Light background color */
+    border-radius: 10px;
+  }
+  

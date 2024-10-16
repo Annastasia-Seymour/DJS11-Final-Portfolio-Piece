@@ -16,6 +16,7 @@ import { fetchPreviewData , fetchShowData} from './api'; // Adjust the path as n
         const data = await fetchPreviewData();
         // Sort data alphabetically by title
         const sortedData = data.sort((a, b) => a.title.localeCompare(b.title));
+        const firstTenShows = sortedData.slice(0,10);
         setPreviewData(sortedData);
         setLoading(false);
       } catch (err) {
