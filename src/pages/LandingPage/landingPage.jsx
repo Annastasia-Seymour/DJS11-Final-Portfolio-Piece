@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
-import FetchDataPreview from "../../components/DataFetch/FetchData";
+import FetchRandomPreview from "../../components/DataFetch/FetchData";
 
 function LandingPage () {
  
@@ -10,7 +10,7 @@ function LandingPage () {
 
       <div className="content-wrapper">
           <div className="trending-div"> 
-          <FetchDataPreview />
+          <FetchRandomPreview />
       </div>
       <Footer />
       </div>

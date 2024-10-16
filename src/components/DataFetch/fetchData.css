@@ -46,3 +46,18 @@ font-style: italic;
 .random-podcast-container{
     background-color: #A8D3B6;
 }
+
+/* Carousel.css */
+.details-container {
+    position: absolute; /* Position relative to the carousel item */
+    bottom: 10%; /* Adjust as necessary for vertical positioning */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to truly center */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 10px; /* Padding for better appearance */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center the text */
+  }
+
+  
