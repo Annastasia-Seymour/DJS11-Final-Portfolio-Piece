@@ -1,5 +1,5 @@
 import React from "react";
-import Episodes from "../../components/DataFetch/FetchSeaon";
+import Episodes from "../../components/DataFetch/FetchSeason";
 import Footer from "../../components/Footer/Footer";
 
 

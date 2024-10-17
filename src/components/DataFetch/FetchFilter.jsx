@@ -2,62 +2,78 @@ import React, { useState, useEffect } from 'react';
 //import { useParams } from 'react-router-dom';
 import { fetchGenreData } from '../../components/DataFetch/api'; // Adjust the path as necessary
 
+const genresList = [
+    { id: 1, name: 'Personal Growth' },
+    { id: 2, name: 'Investigative Journalism' },
+    { id: 3, name: 'History' },
+    { id: 4, name: 'Comedy' },
+    { id: 5, name: 'Entertainment' },
+    { id: 6, name: 'Business' },
+    { id: 7, name: 'Fiction' },
+    { id: 8, name: 'News' },
+    { id: 9, name: 'Kids and Family' },
+  ];// to narrow whats in the id , also facilitating user interaction
+
+
 const FetchFilter = () => {
-  const [genres, setGenres] = useState([]);
+  const [genre, setGenres] = useState([]);
   //const {genreId} = useParams();
-  const [selectedGenre, setSelectedGenre] = useState('');
-  const [filteredShows, setFilteredShows] = useState([]);
+  const [selectedGenreId, setSelectedGenreId] = useState(1); // testing purposes will default to History so that the select is available
+  const [ error, setError] = useState(null);
+  const [ loading, setLoading] = useState(true);
   //remember to add loading state and error state
 
   useEffect(() => {
     const getGenres = async () => {
       try {
-        const data = await fetchGenreData();
+        const response = await fetch(`https://podcast-api.netlify.app/genre/${selectedGenreId}`);
+        if (!response.ok) throw new Error('Failed to fetch genres banana :');
+        const data = await response.json();
         setGenres(data);
       } catch (err) {
         console.error('Error fetching genres:', err);
+        setError(err.message);
+      }
+      finally{
+        setLoading(false)
       }
     };
     getGenres();
-  }, []);
+  }, [selectedGenreId]);// Fetch genres whenever the selectedGenreId changes
 
-  const handleApplyFilter = async () => {
-    if (selectedGenre) { 
-        try{ 
-            // Fetch shows based on selected genre
-            const shows = await FetchFilter(selectedGenre);
-            setFilteredShows(shows);
-        }
-        catch(err){
-            console.error("Error fetching genre: ",err)
-        }
-      
-    }
-  };
+  const handleGenreChange = (event) => {
+    setSelectedGenreId(event.target.value)
+  }
+
+  if (loading) return <p>Loading genres...</p>
+  if (error) return <p>Error fetching genres: apples {error}</p>
 
   return (
-    <div>
-      <h1>Search Shows</h1>
-      <select onChange={(e) => setSelectedGenre(e.target.value)} value={selectedGenre}>
-        <option value="">Select a Genre</option>
-        {genres.map((genre) => (
-          <option key={genre.id} value={genre.id}>{genre.name}</option>
+    
+ <div>
+         <h2>Selected Genre:</h2>
+      <select value={selectedGenreId} onChange={handleGenreChange}>
+        {genresList.map((genre) => (
+          <option key={genre.id} value={genre.id}>
+            {genre.name}
+          </option>
         ))}
       </select>
-      <button onClick={handleApplyFilter}>Filter Shows</button>
-
-      <h2>Filtered Shows</h2>
-      {filteredShows.length > 0 ? (
-        <ul>
-          {filteredShows.map((show) => (
-            <li key={show.id}>{show.title}</li>
-          ))}
-        </ul>
-      ) : (
-        <p>No shows found for this genre.</p>
-      )}
+      <h3>Genre Details:</h3>
+      <p>ID: {genre.id}</p>
+      <p>Title: {genre.title}</p>
+      <p>Description: {genre.description}</p>
+      <h3>Shows in this Genre:</h3>
+      <ul>
+        {genre.shows.map((showId) => (
+          <li key={showId}>Show ID: {showId}</li>
+        ))}
+      </ul>
     </div>
   );
 };
 
+
 export default FetchFilter;
+//put the selctedGbere in a link to route in the urls
+//put shows in image format

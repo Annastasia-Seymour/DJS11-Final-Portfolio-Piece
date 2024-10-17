@@ -3,9 +3,7 @@ import FetchFilter from '../../components/DataFetch/FetchFilter';
 import Navbar from '../../components/Navigation/Navigation';
 
 function SearchPage () {
-  
-
-  return (
+    return (
     <div>
      <Navbar />
       <FetchFilter />
