@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <header className="banner-container">
-      <Link to="/home">
+      <Link to="/">
         <div className="custom-logo">Dinosaur.</div>
       </Link>
       <div className="custom-navbar">

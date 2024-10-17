@@ -19,6 +19,7 @@ function App() {
     <BrowserRouter>
        <Header />
          <Routes>
+            <Route path="/" element={<LandingPage />} />
             <Route path="/home" element={<LandingPage />} />
             <Route path="/show-all" element={<ShowAllPreview />} />
             <Route path="/favorites" element={<Favorites />} />
