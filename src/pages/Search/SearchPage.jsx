@@ -1,27 +1,17 @@
 import React, { useState } from 'react';
-import SearchModal from './SearchModal';
-import FetchFilter from './FetchFilter';
 
-function Search () {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [genreId, setGenreId] = useState(null);
+import FetchFilter from '../../components/DataFetch/FetchFilter';
 
-  const handleApplyFilter = (selectedGenreId) => {
-    setGenreId(selectedGenreId); // Set the genreId based on user's selection
-  };
+function SearchPage () {
+  
 
   return (
     <div>
-      <button onClick={() => setIsModalOpen(true)}>Search</button>
-      <SearchModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        onApplyFilter={handleApplyFilter}
-      />
-      {genreId && <FetchFilter genreId={genreId} />}
+      <h1>I am the SearchPage</h1>
+      <FetchFilter />
     </div>
   );
 };
 
-export default Search;// this is he search page
+export default SearchPage;// this is he search page
 

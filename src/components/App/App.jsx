@@ -8,6 +8,7 @@ import LandingPage from '../../pages/LandingPage/landingPage.jsx';
 import ShowAllPreview from '../../pages/Show All/ShowAll.jsx';
 import Favorites from '../../pages/Favourites/Favourites.jsx';
 import ShowDetails from '../../pages/Show Details/ShowDetails.jsx';
+import SearchPage from '../../pages/Search/SearchPage.jsx';
 
 //remember we want to make like a filter modal to pop up  when the genre is selected
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/show-all" element={<ShowAllPreview />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/show/:id" element={<ShowDetails />} />
+            <Route path="/search" element={<SearchPage/> }></Route>
       </Routes>
          
     </BrowserRouter>
