@@ -65,6 +65,7 @@ const FetchFilter = () => {
       <p>Description: {genre.description}</p>
       <h3>Shows in this Genre:</h3>
       <ul>
+        
         {genre.shows.map((showId) => (
           <li key={showId}>Show ID: {showId}</li>
         ))}

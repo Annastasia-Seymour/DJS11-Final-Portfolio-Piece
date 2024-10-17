@@ -21,8 +21,8 @@ export default function Header() {
         <Link to="/favorites">
           <button>Favorites</button>
         </Link >
-        <Link to="/search">
-        <button >Search</button>        
+        <Link to="/filter">
+        <button >Filter By Genre</button>        
         </Link>
         </div>
     </header>
