@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-//import { Link , useNavigate } from 'react-router-dom'; Add nav link to carousel window
+import { Link } from 'react-router-dom'; //Add nav link to carousel window
 import '../DataFetch/FetchData.css';
 import { fetchPreviewData } from './api'; // Adjust the path as needed
 
@@ -45,6 +45,9 @@ import { fetchPreviewData } from './api'; // Adjust the path as needed
       <div className="carousel-inner">
         {randomShows.map((podcast, index) => (
           <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={podcast.id}>
+            <Link to={`/show/${show.id}`}></Link>
+            
+            
             <img src={podcast.image} alt={podcast.title} className="d-block w-100" />
             <div className="details-container"> {/* Added details container */}
               <h5>{podcast.title}</h5>

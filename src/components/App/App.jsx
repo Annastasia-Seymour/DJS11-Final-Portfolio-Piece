@@ -8,7 +8,7 @@ import LandingPage from '../../pages/LandingPage/landingPage.jsx';
 import ShowAllPreview from '../../pages/Show All/ShowAll.jsx';
 import Favorites from '../../pages/Favourites/Favourites.jsx';
 import ShowDetails from '../../pages/Show Details/ShowDetails.jsx';
-import FilterByGenrePage from '../../pages/Genre Filter/FilterGenre.jsx';
+import FilterByGenrePage from '../../pages/Genre Filter Page/FilterGenrePage.jsx';
 
 //remember we want to make like a filter modal to pop up  when the genre is selected
 

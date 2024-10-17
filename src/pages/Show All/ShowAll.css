@@ -1,21 +1,25 @@
 /* ShowAll.css */
-
+  
 .all-shows-container {
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
   
   .shows-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 4 columns */
+    grid-template-columns: repeat(2, 1fr); /* 4 columns */
     gap: 20px; /* Space between grid items */
   }
   
   .show-item {
-    background-color: #1a1a1a; /* Adjust background color as needed */
+    background-color:  rgb(4, 83, 7);; /* Adjust background color as needed */
     border-radius: 8px; /* Optional rounded corners */
     overflow: hidden; /* Ensures images are contained within the item */
     text-align: center; /* Center text */
     padding: 10px; /* Add some padding */
+    color: rgb(255, 255, 255);
   }
   
   .show-image {
@@ -29,3 +33,28 @@
     margin-bottom: 20px; /* Space below the heading */
   }/*We could keep all styling together but i dont know how i feel about that*/
   
+.h2 , p{ color: white;
+}
+  .alphabet-sort{
+    padding:10px;
+    margin-bottom: 20px;
+    background-color: rgb(4, 83, 7);
+    border: 10px solid  white;
+    
+  }
+  .update-sort{
+    padding:10px;
+    margin-bottom: 20px;
+    height: 5rem;
+    background-color: white;
+    color: black;
+    border: 10px solid  rgb(4, 83, 7);
+    box-sizing: border-box;
+
+  }
+  .button-sort-container{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    padding:5px;
+   
+  }

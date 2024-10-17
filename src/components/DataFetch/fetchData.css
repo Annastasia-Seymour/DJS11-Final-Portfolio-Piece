@@ -1,3 +1,9 @@
+.body{
+  color:black;
+}
+
+
+
 .title-container {
     display: grid;                     /* Use CSS Grid layout */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
@@ -47,7 +53,26 @@ font-style: italic;
     background-color: #A8D3B6;
 }
 
-/* Carousel.css */
+/*FetchData*/
+
+.carousel-item img {
+  max-height: 45rem; /* Adjust to your desired height */
+  object-fit: cover; /* This ensures the image fills the container while keeping the aspect ratio */
+}
+.carousel-inner{
+background-color: #333;
+}
+.details-container {
+  background-color: rgba(0, 0, 0, 0.5); /* Optional for overlay effect */
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
 .details-container {
     position: absolute; /* Position relative to the carousel item */
     bottom: 10%; /* Adjust as necessary for vertical positioning */
@@ -69,6 +94,7 @@ font-style: italic;
 
 
   }
+  /*FetchSeason*/
   .season-image{
     width: 25rem;
 
@@ -93,4 +119,59 @@ font-style: italic;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+.season-episode-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+  color: #ffffff;
+  width: 100%;
+}
 
+.season-episodes{
+  padding :5px;
+}
+
+.episodes-container{
+  display: grid;
+  
+}
+.season-image{
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: center;
+  align-content: center;
+  width:10%;
+  height:10%;
+  
+}
+/**FetchFilter*/
+.filter-container{
+  display: flexbox;
+  flex-wrap: wrap;
+  grid-template-columns: auto;
+  color:#000000
+}
+.select-label{
+  display:flex;
+  flex-direction: row;
+  width:100%;
+}
+.shows-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+  gap: 20px; /* Adds space between grid items */
+  background-color: white;
+}
+
+.show-item {
+  text-align: center;
+}
+
+.show-image {
+  width: 100%; /* Makes the image fill the column width */
+  height: auto;
+  border-radius: 8px;
+}

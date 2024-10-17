@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 //import { useParams } from 'react-router-dom';
-import { fetchGenreData } from '../../components/DataFetch/api'; // Adjust the path as necessary
+//import { fetchGenreData } from '../../components/DataFetch/api'; // Adjust the path as necessary
 
 const genresList = [
     { id: 1, name: 'Personal Growth' },
@@ -21,21 +22,32 @@ const FetchFilter = () => {
   const [selectedGenreId, setSelectedGenreId] = useState(1); // testing purposes will default to History so that the select is available
   const [ error, setError] = useState(null);
   const [ loading, setLoading] = useState(true);
+  const [shows, setShows] = useState([]); // To hold fetched show details
   //remember to add loading state and error state
 
   useEffect(() => {
     const getGenres = async () => {
+      setLoading(true);
       try {
         const response = await fetch(`https://podcast-api.netlify.app/genre/${selectedGenreId}`);
-        if (!response.ok) throw new Error('Failed to fetch genres banana :');
+        if (!response.ok) throw new Error('Failed to fetch genres.');
         const data = await response.json();
         setGenres(data);
+
+        // Fetch show details based on show IDs
+        const showDetails = await Promise.all(
+          data.shows.map(async (showId) => {
+            const showResponse = await fetch(`https://podcast-api.netlify.app/id/${showId}`);
+            if (!showResponse.ok) throw new Error(`Failed to fetch show with ID: ${showId}`);
+            return showResponse.json();
+          })
+        );
+        setShows(showDetails);
       } catch (err) {
         console.error('Error fetching genres:', err);
         setError(err.message);
-      }
-      finally{
-        setLoading(false)
+      } finally {
+        setLoading(false);
       }
     };
     getGenres();
@@ -43,15 +55,16 @@ const FetchFilter = () => {
 
   const handleGenreChange = (event) => {
     setSelectedGenreId(event.target.value)
-  }
+  };
 
   if (loading) return <p>Loading genres...</p>
   if (error) return <p>Error fetching genres: apples {error}</p>
 
   return (
     
- <div>
-         <h2>Selected Genre:</h2>
+    <div className="filter-container">
+    <div className="select-label">
+      <h2>Selected Genre:</h2>
       <select value={selectedGenreId} onChange={handleGenreChange}>
         {genresList.map((genre) => (
           <option key={genre.id} value={genre.id}>
@@ -59,18 +72,29 @@ const FetchFilter = () => {
           </option>
         ))}
       </select>
-      <h3>Genre Details:</h3>
-      <p>ID: {genre.id}</p>
-      <p>Title: {genre.title}</p>
-      <p>Description: {genre.description}</p>
-      <h3>Shows in this Genre:</h3>
-      <ul>
-        
-        {genre.shows.map((showId) => (
-          <li key={showId}>Show ID: {showId}</li>
-        ))}
-      </ul>
     </div>
+
+    {genre && (
+      <div className="filter-display-details">
+        <h3>Genre Details: {genre.title}</h3>
+        <p>ID: {genre.id}</p>
+        <p>Title: {genre.title}</p>
+        <p>Description: {genre.description}</p>
+        <h3>Shows in this Genre:</h3>
+
+        <div className="shows-grid">
+          {shows.map((show) => (
+            <div key={show.id} className="show-item">
+              <Link to={`/show/${show.id}`}>
+              <img src={show.image} alt={show.title} className="show-image" />
+              </Link>
+              
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
   );
 };
 

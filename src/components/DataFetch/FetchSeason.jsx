@@ -41,8 +41,9 @@ const ShowDetails = () => {
           <p>{show.description}</p>
     
           {/* Dropdown for selecting seasons */}
+          <div className='season-episode-container'>
           <div className="season-dropdown">
-            <label htmlFor="season-select"><strong>Select a Season:</strong> </label>
+            <label htmlFor="season-select"><strong>Select a Season: </strong> </label>
             <select
               id="season-select"
               value={selectedSeason}
@@ -55,16 +56,22 @@ const ShowDetails = () => {
               ))}
             </select>
           </div>
-    
+          <div className='season-episodes'>
+              <h5>Episodes:  </h5>
+          </div>
+
+          </div>
           {/* Display episodes for the selected season */}
-          <div className="episodes">
+          <div className="episodes-container">
             {show.seasons
               .filter((season) => season.season === selectedSeason) // Show only selected season's episodes
               .map((season) => (
                 <div key={season.season}>
                   <h2>{season.title}</h2>
-                  <img src={season.image} alt={season.title} className="season-image" />
-                  {season.episodes.map((episode) => (
+                  <div className="season-image">
+                      <img src={season.image} alt={season.title}  />
+                  </div>
+                    {season.episodes.map((episode) => (
                     <div key={episode.episode} className="episode">
                       <h3>Episode {episode.episode}: {episode.title}</h3>
                       <p>{episode.description}</p>

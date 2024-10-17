@@ -1,16 +1,15 @@
 import React from 'react';
 import FetchFilter from '../../components/DataFetch/FetchFilter';
-import Navbar from '../../components/Navigation/Navigation';
+import Footer from '../../components/Footer/Footer';
 
 function FilterByGenrePage () {
     return (
     <div>
-     <Navbar />
       <FetchFilter />
-      <h1>I am the Filter Page</h1>
+      <Footer />
     </div>
   );
 };
 
-export default FilterByGenrePage;// this is he search page
+export default FilterByGenrePage;// this is the filter page
 
