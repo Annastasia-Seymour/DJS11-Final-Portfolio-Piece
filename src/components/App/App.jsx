@@ -23,7 +23,7 @@ function App() {
             <Route path="/show-all" element={<ShowAllPreview />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/show/:id" element={<ShowDetails />} />
-            <Route path="/search" element={<SearchPage/> }></Route>
+            <Route path="/search/:genreId?" element={<SearchPage/> }></Route>
       </Routes>
          
     </BrowserRouter>

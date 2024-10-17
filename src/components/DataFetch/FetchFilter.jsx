@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import FetchFilter from '../../components/DataFetch/FetchFilter';
-import { fetchGenreData } from '../../components/DataFetch/api'; // Adjust the path as needed
+//import { useParams } from 'react-router-dom';
+import { fetchGenreData } from '../../components/DataFetch/api'; // Adjust the path as necessary
 
-function SearchPage() {
+const FetchFilter = () => {
   const [genres, setGenres] = useState([]);
-  const [selectedGenre, setSelectedGenre] = useState(null);
+  //const {genreId} = useParams();
+  const [selectedGenre, setSelectedGenre] = useState('');
+  const [filteredShows, setFilteredShows] = useState([]);
+  //remember to add loading state and error state
 
   useEffect(() => {
     const getGenres = async () => {
       try {
-        const data = await fetchGenreData(); // Assuming this fetches an array of genres
+        const data = await fetchGenreData();
         setGenres(data);
       } catch (err) {
         console.error('Error fetching genres:', err);
@@ -18,28 +21,43 @@ function SearchPage() {
     getGenres();
   }, []);
 
-  const handleFilterApply = (e) => {
-    e.preventDefault();
-    // If you're using genre ID, use setSelectedGenre here
-    setSelectedGenre(e.target.genre.value);
+  const handleApplyFilter = async () => {
+    if (selectedGenre) { 
+        try{ 
+            // Fetch shows based on selected genre
+            const shows = await FetchFilter(selectedGenre);
+            setFilteredShows(shows);
+        }
+        catch(err){
+            console.error("Error fetching genre: ",err)
+        }
+      
+    }
   };
 
   return (
     <div>
       <h1>Search Shows</h1>
-      <form onSubmit={handleFilterApply}>
-        <select name="genre">
-          <option value="">Select a Genre</option>
-          {genres.map((genre) => (
-            <option key={genre.id} value={genre.id}>{genre.name}</option>
+      <select onChange={(e) => setSelectedGenre(e.target.value)} value={selectedGenre}>
+        <option value="">Select a Genre</option>
+        {genres.map((genre) => (
+          <option key={genre.id} value={genre.id}>{genre.name}</option>
+        ))}
+      </select>
+      <button onClick={handleApplyFilter}>Filter Shows</button>
+
+      <h2>Filtered Shows</h2>
+      {filteredShows.length > 0 ? (
+        <ul>
+          {filteredShows.map((show) => (
+            <li key={show.id}>{show.title}</li>
           ))}
-        </select>
-        <button type="submit">Apply Filter</button>
-      </form>
-      {selectedGenre && <FetchFilter genreId={selectedGenre} />}
+        </ul>
+      ) : (
+        <p>No shows found for this genre.</p>
+      )}
     </div>
   );
-}
+};
 
-export default SearchPage;
-
+export default FetchFilter;

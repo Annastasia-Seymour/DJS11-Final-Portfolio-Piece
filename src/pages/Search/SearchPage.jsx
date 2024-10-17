@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import FetchFilter from '../../components/DataFetch/FetchFilter';
+import Navbar from '../../components/Navigation/Navigation';
 
 function SearchPage () {
   
 
   return (
     <div>
-      <h1>I am the SearchPage</h1>
+     <Navbar />
       <FetchFilter />
+      <h1>I am the SearchPage</h1>
     </div>
   );
 };

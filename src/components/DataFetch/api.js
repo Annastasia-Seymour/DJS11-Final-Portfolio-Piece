@@ -1,6 +1,4 @@
 // api.js
-
-// Base URL for the API
 const BASE_URL = 'https://podcast-api.netlify.app';
 
 // Fetch preview data (summary of shows)
