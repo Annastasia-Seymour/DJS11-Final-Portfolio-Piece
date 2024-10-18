@@ -23,16 +23,16 @@ body, html , :root {
 }
 
 .lightTheme{
-  background-color: #F5F5F5;
-  color: #333333;
+  background-color: #88B04B;
+    color: white;
   
 /*Accent: #B2E0D4 (soft mint for buttons)*/
 
 }
 .darkTheme{
-
-  background-color: #2C2C2C;
-  color: #000000;
+  background-color: #88B04B;
+    color: black;
+  
   /*Accent: #A8D3B6 (soft green for highlights)*/
 }
 

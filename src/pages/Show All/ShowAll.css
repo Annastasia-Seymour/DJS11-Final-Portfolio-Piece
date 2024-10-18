@@ -14,7 +14,7 @@
   }
   
   .show-item {
-    background-color:  rgb(4, 83, 7);; /* Adjust background color as needed */
+    background-color: #88B04B; /* Adjust background color as needed */
     border-radius: 8px; /* Optional rounded corners */
     overflow: hidden; /* Ensures images are contained within the item */
     text-align: center; /* Center text */
@@ -33,12 +33,12 @@
     margin-bottom: 20px; /* Space below the heading */
   }/*We could keep all styling together but i dont know how i feel about that*/
   
-.h2 , p{ color: white;
+.h2 ,h1 , p{ color: white;
 }
   .alphabet-sort{
     padding:10px;
     margin-bottom: 20px;
-    background-color: rgb(4, 83, 7);
+    background-color: #88B04B;
     border: 10px solid  white;
     
   }
@@ -48,7 +48,7 @@
     height: 5rem;
     background-color: white;
     color: black;
-    border: 10px solid  rgb(4, 83, 7);
+    border: 10px solid #88B04B;;
     box-sizing: border-box;
 
   }

@@ -1,0 +1,127 @@
+
+.light {
+    background-color: #88B04B;
+    color: white;
+  }
+  .div{
+    color: #88B04B;;
+  }
+  .dark {
+    background-color: black;
+    color: #88B04B;
+  }
+  .theme-button {
+    width:100%;
+    padding:20px;
+    color:white;
+    background-color: #88B04B ;
+  }
+  .theme-button.light{
+    width:100%;
+    padding:20px;
+    color:white;
+    background-color: #88B04B ;
+  }
+  .theme-button.dark{
+    width:100%;
+    padding:20px;
+    color:white;
+    background-color: #88B04B ;
+  }
+
+
+  /* Default (Light Theme) */
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Dark Theme */
+  body.dark {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  /* Component Specific Styles */
+  .button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color:green;
+  }
+  
+  .button.light {
+    background-color: #88B04B;
+    color: white;
+  }
+  
+  .button.dark {
+    background-color: #88B04B;
+    color: black;
+    font-weight: bolder;
+  }
+  
+  /* Add other component styles as needed */
+  
+  .p.light {
+    background-color: #88B04B;
+    color: white;
+  }
+  
+  .p.dark {
+    background-color: #88B04B;
+    color: black;
+    font-weight: bolder;
+  }
+  
+    
+  .h1.light {
+    background-color: #88B04B;
+    color: white;
+  }
+  
+  .h1.dark {
+    background-color: #88B04B;
+    color: black;
+    font-weight: bolder;
+  }
+        
+  .h2.light {
+    background-color: #88B04B;
+    color: white;
+  }
+  
+  .h2.dark {
+    background-color: #88B04B;
+    color: black;
+    font-weight: bolder;   
+  } 
+  .h3.light {
+    background-color: #88B04B;
+    color: white;
+  }
+  
+  .h3.dark {
+    background-color: #88B04B;
+    color: black;
+    font-weight: bolder;
+  }
+      
+  .h4.light {
+    background-color: #88B04B;
+    color: white;
+  }
+  
+  .h4.dark {
+    color: #88B04B;
+    background-color: black;
+    font-weight: bolder;
+  }
+  .custom-logo.light {
+    background-color: #88B04B;
+    color: white; 
+  }
+  .custom-logo.dark {
+    background-color: #88B04B;
+    color: black; 
+  }

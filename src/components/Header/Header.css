@@ -1,11 +1,16 @@
 /* Style for the banner container */
+.everything-container{
+  background-color: white;
+  color:purple;
+
+}
 .banner-container {
   display: flex;  
   flex-wrap: wrap;             /* Flexbox to align items horizontally */
   justify-content: space-between; /* Space between logo and buttons */
   align-items: center;          /* Vertically center logo and buttons */
   padding: 20px 20px;           /* Add some padding around the banner */
-  background-color: #1a1a1a;    /* Dark background color */
+  background-color: #88B04B;    /* Dark background color */
   color: white;                 /* White text color */
   width: 100%;                  /* Full-width header */
 }
@@ -14,23 +19,26 @@
 .custom-logo {
   font-size: 1.5em;             /* Make the logo bigger */
   font-weight: bold; 
-  color: aliceblue;           /* Bold text for logo */
-}
+    color: white; 
+    background-color: #88B04B;
+  }
 
 /* Style for the buttons on the right */
 .custom-navbar {
   display: flex;                /* Flexbox to align buttons horizontally */
-  gap: 15px;                    /* Space between the buttons */
+  gap: 15px; 
+  background-color: #88B04B;                   /* Space between the buttons */
 }
 
 /* Button styling */
 .custom-navbar button {
-  background-color: #333;       /* Button background color */
+  background-color: #88B04B;;       /* Button background color */
   color: white;                 /* Button text color */
   border: none;                 /* Remove borders */
   padding: 10px 15px;           /* Padding for buttons */
   cursor: pointer;              /* Make buttons clickable */
-  border-radius: 5px;           /* Rounded corners */
+  border-radius: 5px;  
+  font-weight: bold;         /* Rounded corners */
 }
 
 .custom-navbar button:hover {

@@ -36,3 +36,12 @@ export async function fetchGenreData(genreId) {
     throw error;
   }
 }
+//fetch specifically the show ID to display in favorites
+export const fetchShowById = async (id) => {
+  const response = await fetch(`https://podcast-api.netlify.app/id/${id}`);
+  if (!response.ok) {
+    throw new Error('Failed to fetch show data');
+  }
+  const data = await response.json();
+  return data;
+};
