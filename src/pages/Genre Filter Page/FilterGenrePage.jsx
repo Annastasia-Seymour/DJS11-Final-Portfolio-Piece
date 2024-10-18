@@ -1,12 +1,11 @@
 import React from 'react';
 import FetchFilter from '../../components/DataFetch/FetchFilter';
-import Footer from '../../components/Footer/Footer';
+//import Footer from '../../components/Footer/Footer';
 
 function FilterByGenrePage () {
     return (
     <div>
       <FetchFilter />
-      <Footer />
     </div>
   );
 };

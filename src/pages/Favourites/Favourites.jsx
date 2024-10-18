@@ -1,4 +1,11 @@
 import React, { useState } from 'react';
 
-eexport
+function FavoritesPage(){
+  return(
+    <div>
+      <h1>I am your Favorites</h1>
+    </div>
+  );
+}
 
+export default FavoritesPage;

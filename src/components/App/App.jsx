@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter ,Routes , Route  } from 'react-router-dom';
 //import data from '../DataFetch/FetchData.jsx'; // i have no idea how its still working 
 import Header from '../Header/Header.jsx';
+import Footer from '../Footer/Footer.jsx';
 import LandingPage from '../../pages/LandingPage/landingPage.jsx';
 import ShowAllPreview from '../../pages/Show All/ShowAll.jsx';
 import Favorites from '../../pages/Favourites/Favourites.jsx';
@@ -28,7 +29,7 @@ function App() {
          <Route path="/show/:id" element={<ShowDetails />} />
          <Route path="/filter/:genreId?" element={<FilterByGenrePage/>} />
        </Routes>
-      
+        <Footer />
     </BrowserRouter>
       
   );//note when user clicks the image it should take them to the episodes page 
