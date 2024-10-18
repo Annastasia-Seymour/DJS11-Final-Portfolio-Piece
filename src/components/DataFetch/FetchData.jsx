@@ -45,20 +45,23 @@ import { fetchPreviewData } from './api'; // Adjust the path as needed
       <div className="carousel-inner">
         {randomShows.map((podcast, index) => (
           <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={podcast.id}>
-            <Link to={`/show/${show.id}`}></Link>
-            
-            
-            <img src={podcast.image} alt={podcast.title} className="d-block w-100" />
+           <Link to={`/show/${podcast.id}`}>
+          <img src={podcast.image} alt={podcast.title} className="d-block w-100" />
+           </Link>
             <div className="details-container"> {/* Added details container */}
               <h5>{podcast.title}</h5>
-              <p>Seasons: {podcast.seasons}</p>
-              <p>
-                Last Updated: {new Date(podcast.updated).toLocaleDateString('en-GB', { 
-                  day: 'numeric', 
-                  month: 'long', 
-                  year: 'numeric' 
+              <div className='para-carousel'>
+                    <p cl>Seasons: {podcast.seasons}</p>
+                   <p>
+                      Last Updated: {new Date(podcast.updated).toLocaleDateString('en-GB', { 
+                      day: 'numeric', 
+                      month: 'long', 
+                       year: 'numeric' 
                 })}
               </p>
+
+              </div>
+              
             </div>
           </div>
         ))}

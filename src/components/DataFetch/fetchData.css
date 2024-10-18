@@ -2,7 +2,9 @@
   color:black;
 }
 
-
+.p{
+  color: black;
+}
 
 .title-container {
     display: grid;                     /* Use CSS Grid layout */
@@ -19,7 +21,7 @@
     border-radius: 5px;                /* Rounded corners */
     padding: 5px;                     /* Padding inside the block */
     text-align: center;      
-    color: #A8D3B6;          /* Center text */
+    color: #000000;          /* Center text */
 }
 
 .podcast-image{
@@ -33,7 +35,7 @@
     display: flex;
     justify-content: center;
     background-color: #A8D3B6;
-    color: #ffff;
+    color: #000000;
    
 }
 
@@ -43,7 +45,7 @@ justify-content: center;
 align-items: center;
 font-weight: bolder;
 margin: auto;
-color: #ccc;
+color: #000000;
 background-color: #A8D3B6 ;
 font-size: 50px;
 font-style: italic;
@@ -54,7 +56,9 @@ font-style: italic;
 }
 
 /*FetchData*/
-
+.para-carousel{
+  color: #ccc;
+}
 .carousel-item img {
   max-height: 45rem; /* Adjust to your desired height */
   object-fit: cover; /* This ensures the image fills the container while keeping the aspect ratio */
@@ -125,7 +129,7 @@ background-color: #333;
   align-items: center;
   padding: 10px;
   background-color: black;
-  color: #ffffff;
+  color: #000000;
   width: 100%;
 }
 
@@ -148,11 +152,11 @@ background-color: #333;
   
 }
 /**FetchFilter*/
-.filter-container{
+.filter-container ,p{
   display: flexbox;
   flex-wrap: wrap;
   grid-template-columns: auto;
-  color:#000000
+  color:#000000;
 }
 .select-label{
   display:flex;

@@ -1,15 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 
-function Favorites(){
-    return(
-        <div>I am your favourite
+eexport
 
-            <ul>
-            <li>Hallo</li>
-        </ul>
-        </div>
-       
-    );
-}
-
-export default Favorites

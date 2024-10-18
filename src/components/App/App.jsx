@@ -10,6 +10,7 @@ import Favorites from '../../pages/Favourites/Favourites.jsx';
 import ShowDetails from '../../pages/Show Details/ShowDetails.jsx';
 import FilterByGenrePage from '../../pages/Genre Filter Page/FilterGenrePage.jsx';
 
+
 //remember we want to make like a filter modal to pop up  when the genre is selected
 
 // App.jsx
@@ -17,16 +18,17 @@ import FilterByGenrePage from '../../pages/Genre Filter Page/FilterGenrePage.jsx
 function App() {
   return (
     <BrowserRouter>
-       <Header />
-         <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/home" element={<LandingPage />} />
-            <Route path="/show-all" element={<ShowAllPreview />} />
-            <Route path="/favorites" element={<Favorites />} />
-            <Route path="/show/:id" element={<ShowDetails />} />
-            <Route path="/filter/:genreId?" element={<FilterByGenrePage/>} />
-      </Routes>
-         
+    
+     <Header />
+        <Routes>
+         <Route path="/" element={<LandingPage />} />
+         <Route path="/home" element={<LandingPage />} />
+         <Route path="/show-all" element={<ShowAllPreview />} />
+         <Route path="/favorites" element={<Favorites />} />
+         <Route path="/show/:id" element={<ShowDetails />} />
+         <Route path="/filter/:genreId?" element={<FilterByGenrePage/>} />
+       </Routes>
+      
     </BrowserRouter>
       
   );//note when user clicks the image it should take them to the episodes page 
