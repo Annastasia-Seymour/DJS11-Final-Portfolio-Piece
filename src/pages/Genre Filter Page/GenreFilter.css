@@ -1,0 +1,40 @@
+/**FetchFilter*/
+.filter-container {
+    display: flexbox;
+    flex-wrap: wrap;
+    grid-template-columns: auto;
+    background-color: #88B04B;
+      color: white;
+  }
+  .filter-display-details ,p{
+    background-color: #88B04B;
+    color: black;
+  }
+  .select-label{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+  }
+  .shows-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+    gap: 20px; /* Adds space between grid items */
+    background-color: white;
+    background-color: black;
+  }
+  
+  .show-item {
+    text-align: center;
+  }
+  
+  .show-image {
+    width: 100%; /* Makes the image fill the column width */
+    height: auto;
+    border-radius: 8px;
+  }
+  .show-details{
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: green;
+    

@@ -1,31 +1,69 @@
 .content-wrapper {
-  width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    color: black;
-    
-  }
-  
-  .preview-div {
-    width: 20%; 
-    height: 20%;
-    padding: 10px;
-    background-color: #f0f0f0; /* Light background color */
-    border-radius: 10px;
-  }
-  .trending-div{
-    width: 20%; 
-    height: 20%;
-    padding: 10px;
-    background-color: #f0f0f0; /* Light background color */
-    border-radius: 10px;
-    
-  }
-  .h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  width: 20em;         /* Fixed width for the content wrapper */
+  height: 50em;       /* Fixed height for the content wrapper */
+  display: flex;      
+  flex-direction: column;  /* Arrange children vertically */
+  align-items: center;  /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  background-color: rgb(20, 209, 162);
+  color: black;
+  border-radius: 10px;  /* Optional: for rounded corners */
+  overflow: hidden;      /* Prevent overflow if content exceeds wrapper */
+}
+
+.preview-div {
+  width: 100%;          /* Take full width of content wrapper */
+  height: 20%;         
+  padding: 10px;
+  background-color: #f0f0f0; /* Light background color */
+  border-radius: 10px;  
+}
+
+.trending-div {
+  width: 20%;          /* Match width to content wrapper */
+  height: 20%;         /* Match height to content wrapper */
+  padding: 10px;
+  background-color: #f0f0f0; /* Light background color */
+  border-radius: 10px;  
+  overflow-y: auto;     /* Add scrolling if content exceeds */
+}
+
+.h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FetchData */
+.para-carousel {
+  color: #ccc;
+}
+
+.carousel-item img {
+  width: 100%; /* Ensure the image takes the full width of the container */
+  height: 100%; /* Ensure the image takes the full height of the container */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+  object-position: center; /* Center the image */
+}
+
+.carousel-inner {
+  background-color: #333;
+}
+
+.details-container {
+  position: absolute; /* Position relative to the carousel item */
+  bottom: 10%; /* Adjust as necessary for vertical positioning */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to truly center */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white; /* Text color */
+  padding: 10px; /* Padding for better appearance */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center the text */
+}
+.carousel-item {
+  height: 45rem; /* Set a fixed height for the carousel item */
+  position: relative; /* Allow absolute positioning for the details container */
+}
+
+

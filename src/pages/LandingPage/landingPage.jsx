@@ -1,11 +1,12 @@
 import React from "react";
 import FetchRandomPreview from "../../components/DataFetch/FetchData";
+import './landingPage.css'
 
 function LandingPage () {
  
 
   return (
-    <div>
+    
 
       <div className="content-wrapper">
           <div className="trending-div"> 
@@ -13,7 +14,7 @@ function LandingPage () {
       </div>
     
       </div>
-    </div>
+  
   );
 };
 

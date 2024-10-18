@@ -1,6 +1,6 @@
 import React from 'react';
 import FetchFilter from '../../components/DataFetch/FetchFilter';
-//import Footer from '../../components/Footer/Footer';
+import './GenreFilter.css'
 
 function FilterByGenrePage () {
     return (
